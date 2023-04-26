@@ -16,6 +16,7 @@ if(isset($_SESSION['letters']) || !empty($_SESSION['letters'])) {
         $sql_query = "SELECT word FROM words WHERE LENGTH(word) = ".$_SESSION['letters']." ORDER BY RAND() LIMIT 1";
     }
     $result = mysqli_query($conn, $sql_query);
+    $_SESSION['word'] = $result->fetch_array()['word'];
     $_SESSION['letters'] = strlen($result->fetch_array()['word']);
 }
 ?>
