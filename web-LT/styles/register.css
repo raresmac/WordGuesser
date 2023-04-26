@@ -1,0 +1,136 @@
+body {
+  background-color: #202020;
+  overflow: hidden;
+}
+
+.letters-in-background {
+  color: white;
+  font-family: 'Iceland', cursive;
+  font-size: 400px;
+  opacity: 0.10;
+}
+
+.letters-in-background .B {
+  position: absolute;
+  top: 10px;
+  left: 200px;
+  -webkit-text-stroke: 8px #00FF66;
+  rotate: 45deg;
+}
+
+.letters-in-background .N {
+  position: absolute;
+  left: 50px;
+  top: 300px;
+  -webkit-text-stroke: 8px #FF00A8;
+  rotate: -45deg;
+}
+
+.letters-in-background .F {
+  position: absolute;
+  left: 900px;
+  top: 100px;
+  -webkit-text-stroke: 8px #FF0000;
+  rotate: 10deg;
+}
+
+.letters-in-background .P {
+  position: absolute;
+  left: 600px;
+  top: 350px;
+  -webkit-text-stroke: 8px #000AFF;
+  rotate: -130deg;
+}
+
+.letters-in-background .A {
+  position: absolute;
+  left: 1000px;
+  top: 350px;
+  -webkit-text-stroke: 8px #EBFF00;
+  rotate: 30deg;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+}
+
+.rectangle-title {
+  position: absolute;
+  top: 50px;
+  border-radius: 45px;
+  background-color: rgba(102, 102, 102, 0.10);
+  border: 2px solid #666666;
+  padding: 20px;
+  height: 6vw;
+  width: 500px;
+}
+
+.title {
+  text-align: center;
+  color: #8021CB;
+  font-family: 'Iceberg', cursive;
+  font-size: 5vw;
+  -webkit-text-stroke: 0.5px white;
+}
+
+.username {
+  position: absolute;
+  top: 250px;
+}
+
+.password {
+  position: absolute;
+  top: 370px;
+}
+
+.username-password-text {
+  color: #FFFFFF;
+  font-family: 'Iceland', cursive;
+  font-weight: 400px;
+  font-size: 50px;
+}
+
+.rectangle-username-password {
+  border-radius: 45px;
+  background-color: #BBBBBB;
+  padding: 10px;
+  height: 3vw;
+  width: 500px;
+}
+
+.login-register {
+  display: flex;
+  position: absolute;
+  top: 520px;
+  width: 500px;
+  justify-content: space-between;
+}
+
+.rectangle-login-register {
+  border-radius: 45px;
+  background-color: #202020;
+  padding: 10px;
+  height: 3vw;
+  width: 200px;
+  border: 2px solid #666666;
+}
+
+.login-register-text, input[type=submit] {
+  text-align: center;
+  background-color: #202020;
+  font-family: 'Iceland', cursive;
+  font-size: 50px;
+  color: #8021CB;
+  -webkit-text-stroke: 0.15px white;
+}
+
+.forgot-password {
+  position: absolute;
+  top: 610px;
+  font-family: 'Iceland', cursive;
+  color: #000000;
+  -webkit-text-stroke: 0.3px white;
+  font-size: 40px;
+}
