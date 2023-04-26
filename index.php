@@ -62,9 +62,13 @@
         <input type="submit" class="rectangle-login-register" value="Login" name="login">
         <input type="submit" class="rectangle-login-register" value="Register" name="register">
       </div>
-      <div class="forgot-password">
+
+      <!-- 
+      <input type="submit" class="forgot-password" value="Password forgot" name="forgot"> 
+      -->
+      <!-- <div class="forgot-password">
         Password forgot
-      </div>
+      </div> -->
     </form>
   </div>
 </body>

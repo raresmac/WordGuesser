@@ -13,7 +13,6 @@ if($_POST['login']) {
 
 		if(mysqli_num_rows($result) == 1) {
 			$_SESSION['logged'] = True;
-			
 			header('Location: main.php');
 			exit();
 		}
