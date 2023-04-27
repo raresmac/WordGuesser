@@ -1,0 +1,72 @@
+body {
+    background-color: #202020;
+    margin: 0;
+    height: 100%;
+    overflow: auto;
+}
+
+.letters-in-background {
+    color: white;
+    font-family: 'Iceland', cursive;
+    font-size: 300px;
+    opacity: 0.10;
+}
+
+.letters-in-background .B {
+    position: absolute;
+    top: 10px;
+    left: 200px;
+    -webkit-text-stroke: 8px #00FF66;
+    rotate: 45deg;
+}
+
+.letters-in-background .N {
+    position: absolute;
+    left: 50px;
+    top: 300px;
+    -webkit-text-stroke: 8px #FF00A8;
+    rotate: -45deg;
+}
+
+.letters-in-background .F {
+    position: absolute;
+    left: 950px;
+    top: 100px;
+    -webkit-text-stroke: 8px #FF0000;
+    rotate: 10deg;
+}
+
+.letters-in-background .P {
+    position: absolute;
+    left: 600px;
+    top: 380px;
+    -webkit-text-stroke: 8px #000AFF;
+    rotate: -130deg;
+}
+
+.letters-in-background .A {
+    position: absolute;
+    left: 1200px;
+    top: 350px;
+    -webkit-text-stroke: 8px #EBFF00;
+    rotate: 30deg;
+}
+
+.rectangle-title {
+    position: absolute;
+    top: 50px;
+    border-radius: 45px;
+    background-color: rgba(102, 102, 102, 0.10);
+    border: 2px solid #666666;
+    padding: 20px;
+    height: 6vw;
+    width: 500px;
+}
+
+.title {
+    text-align: center;
+    color: #8021CB;
+    font-family: 'Iceberg', cursive;
+    font-size: 5vw;
+    -webkit-text-stroke: 0.5px white;
+}

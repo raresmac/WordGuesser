@@ -10,7 +10,7 @@
   font-family: 'Iceland';
   font-style: normal;
   font-weight: 400;
-  font-size: 70px;
+  font-size: 75px;
   text-align: center;
   color: #8021CB;
   -webkit-text-stroke: 0.5px #FFFFFF;
@@ -19,8 +19,8 @@
 
 .rectangle-newgame {
   margin: 30px;
-  margin-top: 100px;
-  width: 25%;
+  margin-top: 300px;
+  width: 350px;
   height: 15%;
   background: #202020;
   border: 3px solid #666666;
@@ -29,7 +29,7 @@
 
 .rectangle-logout {
   margin: 30px;
-  width: 25%;
+  width: 350px;
   height: 15%;
   background: #202020;
   border: 3px solid #666666;

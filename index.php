@@ -1,4 +1,11 @@
-<?php session_start(); ?>
+<?php
+session_start();
+
+if (isset($_SESSION['logged']) && $_SESSION['logged'] == True) {
+  header('Location: main.php');
+  exit();
+}
+?>
 
 <!DOCTYPE html>
 <html>
@@ -14,6 +21,7 @@
   <link rel="website icon" type="png" href="images/logo4.png">
 
   <link rel="stylesheet" href="styles/register.css">
+  <link rel="stylesheet" href="styles/default.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,14 +70,8 @@
         <input type="submit" class="rectangle-login-register" value="Login" name="login">
         <input type="submit" class="rectangle-login-register" value="Register" name="register">
       </div>
-
-      <!-- 
-      <input type="submit" class="forgot-password" value="Password forgot" name="forgot"> 
-      -->
-      <!-- <div class="forgot-password">
-        Password forgot
-      </div> -->
     </form>
   </div>
 </body>
+
 </html>

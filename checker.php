@@ -1,12 +1,6 @@
 <?php
 session_start();
 
-//de scos
-$_SESSION['word']=  'elephant';
-$_SESSION['choice']='elehzhnt';
-$_SESSION['letters']=8;
-//pana aici
-
 $result = array();
 $word = str_split($_SESSION['word']);
 $choice = str_split($_SESSION['choice']);
