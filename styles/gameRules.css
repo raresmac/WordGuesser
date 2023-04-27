@@ -1,0 +1,71 @@
+.gameRules {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 150px;
+  margin-bottom: 80px;
+}
+
+.rules-text {
+  font-family: 'Iceland';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 100px;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+  -webkit-text-stroke: 2px black;
+}
+
+.choice {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 70px;
+}
+
+.less-space-after-choice {
+  margin-bottom: 30px;
+}
+
+.rectangle-number-choice {
+  height: 80px;
+  width: 80px;
+  background: #D9D9D9;
+  margin: 10px;
+
+  font-family: 'Iceland';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 80px;
+  text-align: center;
+
+  color: #000000;
+}
+
+.rectangle-number-umplutura {
+  height: 80px;
+  width: 80px;
+  background: #202020;
+  margin: 10px;
+}
+
+.next-arrow {
+  height: 100px;
+  width: 90%;
+  text-align: center;
+  font-size: 90px;
+  color: #8021CB;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.rectangle-next-arrow {
+  height: auto;
+  width: auto;
+  background: #202020;
+  border: 3px solid #666666;
+  border-radius: 45px;
+  margin-left: 35%;
+}
