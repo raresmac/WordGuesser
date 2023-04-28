@@ -13,63 +13,62 @@
 }
 
 .letters-8 {
-
   border: 10px solid #202020;
   background: linear-gradient(to left, #202020 20px, transparent 0);
-  background-size: 120px 12px;
+  background-size: 131px 12px;
   background-color: #e3dbdb;
-  width: 940px;
-  font: 80px 'Iceberg', normal;
-  letter-spacing: 77px;
-  text-indent: 20px;
+  width: 1044px;
+  font: 100px 'Courier New', normal;
+  letter-spacing: 68.6px;
+  text-indent: 15px;
   text-transform: uppercase;
 }
 
 .letters-7 {
   border: 10px solid #202020;
-  background: linear-gradient(to left, #202020 10px, transparent 0);
-  background-size: 70px 12px;
+  background: linear-gradient(to left, #202020 20px, transparent 0);
+  background-size: 131px 12px;
   background-color: #e3dbdb;
-  width: 480px;
-  font: 50px 'Iceberg', normal;
-  letter-spacing: 45px;
-  text-indent: 10px;
+  width: 912px;
+  font: 100px 'Courier New', normal;
+  letter-spacing: 68.6px;
+  text-indent: 15px;
   text-transform: uppercase;
 }
 
 .letters-6 {
   border: 10px solid #202020;
-  background: linear-gradient(to left, #202020 10px, transparent 0);
-  background-size: 70px 12px;
+  background: linear-gradient(to left, #202020 20px, transparent 0);
+  background-size: 131px 12px;
   background-color: #e3dbdb;
-  width: 410px;
-  font: 50px 'Iceberg', normal;
-  letter-spacing: 45px;
-  text-indent: 10px;
+  width: 781px;
+  font: 100px 'Courier New', normal;
+  letter-spacing: 68.6px;
+  text-indent: 15px;
   text-transform: uppercase;
 }
 
 .letters-5 {
   border: 10px solid #202020;
-  background: linear-gradient(to left, #202020 10px, transparent 0);
-  background-size: 70px 12px;
+  background: linear-gradient(to left, #202020 20px, transparent 0);
+  background-size: 131px 12px;
   background-color: #e3dbdb;
-  width: 340px;
-  font: 50px 'Iceberg', normal;
-  letter-spacing: 45px;
-  text-indent: 10px;
+  width: 649px;
+  font: 100px 'Courier New', normal;
+  letter-spacing: 68.6px;
+  text-indent: 15px;
   text-transform: uppercase;
 }
 
 .letters-4 {
   border: 10px solid #202020;
-  background: linear-gradient(to left, #202020 10px, transparent 0);
-  background-size: 70px 12px;
+  background: linear-gradient(to left, #202020 20px, transparent 0);
+  background-size: 131px 12px;
   background-color: #e3dbdb;
-  width: 260px;
-  font: 50px 'Iceberg', normal;
-  letter-spacing: 45px;
-  text-indent: 10px;
+  width: 520px;
+  font: 100px 'Courier New', normal;
+  letter-spacing: 68.6px;
+  text-indent: 15px;
   text-transform: uppercase;
 }
 
@@ -87,7 +86,7 @@
 
 .icon-home {
   transition: color 1s;
-  margin-left: 10px;
+  margin-left: 40px;
 }
 
 .icon-hint {
