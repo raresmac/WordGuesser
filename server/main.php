@@ -31,10 +31,10 @@ if (isset($_POST['logout'])) {
 	<script src="https://kit.fontawesome.com/0668abd750.js" crossorigin="anonymous"></script>
 
 	<title>Main Menu</title>
-	<link rel="website icon" type="png" href="images/logo4.png">
+	<link rel="website icon" type="png" href="../images/logo4.png">
 
-	<link rel="stylesheet" href="styles/mainMenu.css">
-  <link rel="stylesheet" href="styles/default.css">
+	<link rel="stylesheet" href="../styles/mainMenu.css">
+  <link rel="stylesheet" href="../styles/default.css">
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

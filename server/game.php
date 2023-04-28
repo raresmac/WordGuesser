@@ -20,9 +20,9 @@ if (!isset($_SESSION['logged']) || $_SESSION['logged'] != True) {
     <script src="https://kit.fontawesome.com/0668abd750.js" crossorigin="anonymous"></script>
 
     <title>Rules Page</title>
-    <link rel="website icon" type="png" href="images/logo4.png">
+    <link rel="website icon" type="png" href="../images/logo4.png">
 
-    <link rel="stylesheet" href="styles/demo.css">
+    <link rel="stylesheet" href="../styles/game.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

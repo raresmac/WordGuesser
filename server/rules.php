@@ -50,10 +50,10 @@ if (isset($_SESSION['letters']) && !empty($_SESSION['letters']) && isset($_SESSI
     <script src="https://kit.fontawesome.com/0668abd750.js" crossorigin="anonymous"></script>
 
     <title>Rules Page</title>
-    <link rel="website icon" type="png" href="images/logo4.png">
+    <link rel="website icon" type="png" href="../images/logo4.png">
 
-    <link rel="stylesheet" href="styles/default.css">
-    <link rel="stylesheet" href="styles/gameRules.css">
+    <link rel="stylesheet" href="../styles/default.css">
+    <link rel="stylesheet" href="../styles/gameRules.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -95,7 +95,7 @@ if (isset($_SESSION['letters']) && !empty($_SESSION['letters']) && isset($_SESSI
                 <div class="rectangle-number-fill"></div>
                 <div class="rectangle-number-fill"></div>
             </div>
-            <script src="scripts/select.js"></script>
+            <script src="../scripts/select.js"></script>
         </div>
         <button class="rectangle-next-arrow next-arrow"><i class="fa-solid fa-arrow-right"></i></button>
     </form>
