@@ -1,18 +1,140 @@
-body {
-    padding: 20px;
-  }
-  
-  form > div {
-    margin: 0 0 20px 0;
-  }
-  
-  input[type=text] {
-    border: 1px solid #ccc;
-    background: linear-gradient(to left, #ccc 1px, transparent 0);
-    background-size: 18px 1px;
-    width: 321px; 
-    font: 12px monaco, monospace; 
-    letter-spacing: 10.5px;
-    text-indent: 5px;
-    text-transform: uppercase;
-  }
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text-letters {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.letters-8 {
+
+  border: 10px solid #202020;
+  background: linear-gradient(to left, #202020 20px, transparent 0);
+  background-size: 120px 12px;
+  background-color: #e3dbdb;
+  width: 940px;
+  font: 80px 'Iceberg', normal;
+  letter-spacing: 77px;
+  text-indent: 20px;
+  text-transform: uppercase;
+}
+
+.letters-7 {
+  border: 10px solid #202020;
+  background: linear-gradient(to left, #202020 10px, transparent 0);
+  background-size: 70px 12px;
+  background-color: #e3dbdb;
+  width: 480px;
+  font: 50px 'Iceberg', normal;
+  letter-spacing: 45px;
+  text-indent: 10px;
+  text-transform: uppercase;
+}
+
+.letters-6 {
+  border: 10px solid #202020;
+  background: linear-gradient(to left, #202020 10px, transparent 0);
+  background-size: 70px 12px;
+  background-color: #e3dbdb;
+  width: 410px;
+  font: 50px 'Iceberg', normal;
+  letter-spacing: 45px;
+  text-indent: 10px;
+  text-transform: uppercase;
+}
+
+.letters-5 {
+  border: 10px solid #202020;
+  background: linear-gradient(to left, #202020 10px, transparent 0);
+  background-size: 70px 12px;
+  background-color: #e3dbdb;
+  width: 340px;
+  font: 50px 'Iceberg', normal;
+  letter-spacing: 45px;
+  text-indent: 10px;
+  text-transform: uppercase;
+}
+
+.letters-4 {
+  border: 10px solid #202020;
+  background: linear-gradient(to left, #202020 10px, transparent 0);
+  background-size: 70px 12px;
+  background-color: #e3dbdb;
+  width: 260px;
+  font: 50px 'Iceberg', normal;
+  letter-spacing: 45px;
+  text-indent: 10px;
+  text-transform: uppercase;
+}
+
+.icon-game-page {
+  display: flex;
+  justify-content: flex-end;
+
+  color: #7d5fff;
+  font-size: 45px;
+  text-align: right;
+  margin: 30px;
+  margin-right: 50px;
+  cursor: pointer;
+}
+
+.icon-home {
+  transition: color 1s;
+  margin-left: 10px;
+}
+
+.icon-hint {
+  transition: color 1s;
+}
+
+.icon-hint:hover {
+  transition: color 1s;
+  color: #e3dbdb;
+}
+
+.icon-home:hover {
+  transition: color 1s;
+  color: #e3dbdb;
+}
+
+.show-how-many-hints {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-show-hints {
+  margin-top: 5px;
+  color: #e3dbdb;
+  font: 20px 'Iceland', normal;
+}
+
+.submit-button {
+  margin-left: 75%;
+
+  height: 70px;
+  border-radius: 45px;
+  border: 2px solid #7256ef;
+  width: 180px;
+  text-align: center;
+  color: #e3dbdb;
+  background-color: #7d5fff;
+  font: 40px 'Iceberg', normal;
+  -webkit-text-stroke: 0.2px black;
+  cursor: pointer;
+
+  transition: background-color 1s;
+}
+
+.submit-button:hover {
+  transition: background-color 1s;
+  background-color: #6147d6;
+}

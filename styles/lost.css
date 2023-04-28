@@ -66,6 +66,7 @@
   margin-left: 25%;
   width: 50%;
   justify-content: space-between;
+  -webkit-text-stroke: 0.5px black;
 }
 
 .icons-style {
@@ -79,13 +80,31 @@
 }
 
 .color-green {
+  transition: color 1s;
   color: #3ae374;
 }
 
+.color-green:hover {
+  transition: color 1s;
+  color: #41b569;
+}
+
 .color-magenta {
+  transition: color 1s;
   color: #546de5;
 }
 
+.color-magenta:hover {
+  transition: color 1s;
+  color: #4055ba;
+}
+
 .color-purple {
+  transition: color 1s;
   color: #8021CB;
+}
+
+.color-purple:hover {
+  transition: color 1s;
+  color: #7320b2;
 }
