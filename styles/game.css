@@ -1,3 +1,36 @@
+#game-board {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.letter-box {
+  color:#ffffff;
+  border: 2px solid gray;
+  border-radius: 3px;
+  margin: 2px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.letter-box-filled{
+  color:#1b1b1b;
+}
+
+.filled-box {
+  border: 2px solid black;
+}
+
+.letter-row {
+  display: flex;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -5,7 +38,7 @@
 }
 
 .text-letters {
-
+  text-transform: uppercase;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,55 +54,6 @@
   font: 100px 'Courier New', normal;
   letter-spacing: 68.6px;
   text-indent: 15px;
-  text-transform: uppercase;
-}
-
-.letters-7 {
-  border: 10px solid #202020;
-  background: linear-gradient(to left, #202020 20px, transparent 0);
-  background-size: 131px 12px;
-  background-color: #e3dbdb;
-  width: 912px;
-  font: 100px 'Courier New', normal;
-  letter-spacing: 68.6px;
-  text-indent: 15px;
-  text-transform: uppercase;
-}
-
-.letters-6 {
-  border: 10px solid #202020;
-  background: linear-gradient(to left, #202020 20px, transparent 0);
-  background-size: 131px 12px;
-  background-color: #e3dbdb;
-  width: 781px;
-  font: 100px 'Courier New', normal;
-  letter-spacing: 68.6px;
-  text-indent: 15px;
-  text-transform: uppercase;
-}
-
-.letters-5 {
-  border: 10px solid #202020;
-  background: linear-gradient(to left, #202020 20px, transparent 0);
-  background-size: 131px 12px;
-  background-color: #e3dbdb;
-  width: 649px;
-  font: 100px 'Courier New', normal;
-  letter-spacing: 68.6px;
-  text-indent: 15px;
-  text-transform: uppercase;
-}
-
-.letters-4 {
-  border: 10px solid #202020;
-  background: linear-gradient(to left, #202020 20px, transparent 0);
-  background-size: 131px 12px;
-  background-color: #e3dbdb;
-  width: 520px;
-  font: 100px 'Courier New', normal;
-  letter-spacing: 68.6px;
-  text-indent: 15px;
-  text-transform: uppercase;
 }
 
 .icon-game-page {

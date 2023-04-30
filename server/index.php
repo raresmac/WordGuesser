@@ -39,14 +39,6 @@ if (isset($_SESSION['logged']) && $_SESSION['logged'] == True) {
   unset($_SESSION['error']);
   ?>
 
-  <div class="letters-in-background">
-    <div class="B">B</div>
-    <div class="N">N</div>
-    <div class="F">F</div>
-    <div class="P">P</div>
-    <div class="A">A</div>
-  </div>
-
   <div class="container">
     <div class="rectangle-title">
       <div class="title">WordGuesser</div>

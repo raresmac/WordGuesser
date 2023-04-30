@@ -1,3 +1,8 @@
+body {
+  background-image: url("../images/background.png");
+  background-repeat: no-repeat;
+}
+
 .mainMenu{
   display: flex;
   height: 100%;
@@ -27,6 +32,11 @@
   border-radius: 45px;
 }
 
+.rectangle-newgame:hover {
+  cursor: pointer;
+  background-color: #333232;
+}
+
 .rectangle-logout {
   margin: 30px;
   width: 350px;
@@ -34,4 +44,9 @@
   background: #202020;
   border: 3px solid #666666;
   border-radius: 45px;
+}
+
+.rectangle-logout:hover {
+  cursor: pointer;
+  background-color: #333232;
 }

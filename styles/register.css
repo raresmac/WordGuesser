@@ -1,3 +1,8 @@
+body {
+  background-image: url("../images/background.png");
+  background-repeat: no-repeat;
+}
+
 .container {
   display: flex;
   height: 100%;
@@ -22,6 +27,9 @@
 }
 
 .rectangle-username-password {
+  font-family: 'Iceland', cursive;
+  font-size: 35px;
+  text-indent: 15px;
   border-radius: 45px;
   background-color: #BBBBBB;
   padding: 10px;
@@ -46,7 +54,13 @@
   border: 2px solid #666666;
 }
 
-.login-register-text, input[type=submit] {
+.rectangle-login-register:hover {
+  cursor: pointer;
+  background-color: #333232;
+}
+
+.login-register-text,
+input[type=submit] {
   text-align: center;
   background-color: #202020;
   font-family: 'Iceland', cursive;

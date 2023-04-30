@@ -63,6 +63,7 @@
   width: 80px;
   background: #000000;
   margin: 10px;
+  cursor: pointer;
   transition-duration: 0.3s;
   color: #e3dbdb;
 }
@@ -96,6 +97,7 @@
   height: 80px;
   width: 80px;
   background: #000000;
+  cursor: pointer;
   margin: 10px;
   transition-duration: 0.3s;
   color: #e3dbdb;
@@ -122,4 +124,9 @@
   border: 3px solid #666666;
   border-radius: 45px;
   margin-left: 38%;
+}
+
+.rectangle-next-arrow:hover {
+  cursor: pointer;
+  background-color: #333232;
 }

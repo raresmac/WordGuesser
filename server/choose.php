@@ -16,7 +16,6 @@ if(isset($_SESSION['letters']) || !empty($_SESSION['letters'])) {
     }
     $result = mysqli_query($conn, $sql_query);
     $_SESSION['word'] = $result->fetch_array()['word'];
-    //unset($_SESSION['letters']);
     header('Location: game.php');
     exit();
 }
