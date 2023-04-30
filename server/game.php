@@ -9,9 +9,9 @@
   <link rel="website icon" type="png" href="../images/logo4.png">
 
   <title>Game Page</title>
-  <link rel="stylesheet" href="../styles/style.css">
   <link rel="stylesheet" href="../styles/game.css">
   <link rel="stylesheet" href="../styles/default.css">
+  <link rel="stylesheet" href="../styles/lost.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <meta charset="UTF-8">
@@ -27,22 +27,62 @@
 </head>
 
 <body>
-  <div class="icon-game-page">
-    <div class="show-how-many-hints">
-      <i class="fa-solid fa-lightbulb icon-hint"></i>
-      <div class="text-show-hints">5/7</div>
+  <div class="enableBlur" id="enableBlur">
+    <div id="icon-game-page">
+      <div class="show-how-many-hints">
+        <i class="fa-solid fa-lightbulb icon-hint"></i>
+        <div class="text-show-hints">5/7</div>
+      </div>
+      <a href="main.php">
+        <i class="fa-solid fa-house icon-home"></i>
+      </a>
     </div>
 
-    <i class="fa-solid fa-house icon-home"></i>
+    <div id="game-board"></div>
+
+    <button id="submit-button">
+      Submit
+    </button>
+
+    <div class="mainMenu disableBlur" id="mainMenuLost">
+      <div class="rectangle-lost">
+        <div class="text-you-lost">You lost! :&#40</div>
+        <div class="text-the-word-was">The word was:</div>
+        <div class="text-correct-word">NICE WORD</div>
+        <div class="icons">
+          <a href="choose.php">
+            <button class="icons-style color-green" onclick=><i class="fa-solid fa-play"></i></button>
+          </a>
+          <a href="rules.php">
+            <button class="icons-style color-magenta"><i class="fa-solid fa-gear"></i></button>
+          </a>
+          <a href="main.php">
+            <button class="icons-style color-purple"><i class="fa-solid fa-house"></i></button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="mainMenu disableBlur" id="mainMenuWon">
+      <div class="rectangle-lost">
+        <div class="text-you-lost">You won!</div>
+        <div class="text-the-word-was">You used:</div>
+        <div class="text-correct-word">X hints</div>
+        <div class="icons">
+          <a href="choose.php">
+            <button class="icons-style color-green"><i class="fa-solid fa-play"></i></button>
+          </a>
+          <a href="rules.php">
+            <button class="icons-style color-magenta"><i class="fa-solid fa-gear"></i></button>
+          </a>
+          <a href="main.php">
+            <button class="icons-style color-purple"><i class="fa-solid fa-house"></i></button>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <button class="submit-button">
-    Submit
-  </button>
 
-  <div id="game-board">
-
-  </div>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>

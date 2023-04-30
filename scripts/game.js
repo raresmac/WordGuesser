@@ -29,7 +29,46 @@ fetch('../server/info.php')
             board.appendChild(row)
         }
 
+        function youLostOn() {
+            document.getElementById("mainMenuLost").style.display = 'flex';
+            document.getElementById("icon-game-page").setAttribute("style", "filter: blur(8px)");
+            document.getElementById("game-board").setAttribute("style", "filter: blur(8px)");
+            document.getElementById("submit-button").setAttribute("style", "filter: blur(8px)");
+        }
+
+        function youLostOff() {
+            document.getElementById("mainMenuLost").style.display = 'none';
+            document.getElementById("icon-game-page").setAttribute("style", "filter: blur(0px)");
+            document.getElementById("game-board").setAttribute("style", "filter: blur(0px)");
+            document.getElementById("submit-button").setAttribute("style", "filter: blur(0px)");
+        }
+
+        function youWonOn() {
+            document.getElementById("mainMenuWon").style.display = 'flex';
+            document.getElementById("icon-game-page").setAttribute("style", "filter: blur(8px)");
+            document.getElementById("game-board").setAttribute("style", "filter: blur(8px)");
+            document.getElementById("submit-button").setAttribute("style", "filter: blur(8px)");
+        }
+
+        function youWonOff() {
+            document.getElementById("mainMenuWon").style.display = 'none';
+            document.getElementById("icon-game-page").setAttribute("style", "filter: blur(0px)");
+            document.getElementById("game-board").setAttribute("style", "filter: blur(0px)");
+            document.getElementById("submit-button").setAttribute("style", "filter: blur(0px)");
+        }
+
         initBoard()
+        youLostOff()
+        youWonOff()
+
+        var clicked = false
+
+        document.getElementById('submit-button').addEventListener("click", function () {
+            clicked = true
+            document.dispatchEvent(new KeyboardEvent('keydown', { 'key': '\\' }));
+            document.dispatchEvent(new KeyboardEvent('keyup', { 'key': '\\' }));
+            console.log("hey")
+        });
 
         document.addEventListener("keyup", (e) => {
 
@@ -43,8 +82,9 @@ fetch('../server/info.php')
                 return
             }
 
-            if (pressedKey === "Enter") {
+            if (pressedKey === "Enter" || clicked === true) {
                 checkGuess()
+                clicked = false;
                 return
             }
 
@@ -55,7 +95,6 @@ fetch('../server/info.php')
                 insertLetter(pressedKey)
             }
         })
-
         function insertLetter(pressedKey) {
             if (nextLetter === rightGuessString.length) {
                 return
@@ -93,25 +132,18 @@ fetch('../server/info.php')
                 return
             }
 
-
             for (let i = 0; i < rightGuessString.length; i++) {
                 let letterColor = ''
                 let box = row.children[i]
                 let letter = currentGuess[i]
 
                 let letterPosition = rightGuess.indexOf(currentGuess[i])
-                // is letter in the correct guess
                 if (letterPosition === -1) {
                     letterColor = 'grey'
                 } else {
-                    // now, letter is definitely in word
-                    // if letter index and right guess index are the same
-                    // letter is in the right position 
                     if (currentGuess[i] === rightGuess[i]) {
-                        // shade green 
                         letterColor = 'green'
                     } else {
-                        // shade box yellow
                         letterColor = 'yellow'
                     }
 
@@ -120,15 +152,17 @@ fetch('../server/info.php')
 
                 let delay = 200 * i
                 setTimeout(() => {
-                    //shade box
+                    box.style.color = "black"
                     box.style.backgroundColor = letterColor
-                    shadeKeyBoard(letter, letterColor)
                 }, delay)
             }
 
             if (guessString === rightGuessString) {
-                guessesRemaining = 0
-                return
+                setTimeout(() => {
+                    youWonOn()
+                    guessesRemaining = 0
+                    return
+                }, 200 * rightGuessString.length)
             } else {
                 guessesRemaining -= 1;
                 currentRow = currentRow + 1;
@@ -137,32 +171,13 @@ fetch('../server/info.php')
 
                 setTimeout(() => {
                     if (guessesRemaining === 0) {
-                        alert("You've run out of guesses! Game over!")
+                        youLostOn();
                         alert(`The right word was: "${rightGuessString}"`)
                     }
                     else {
                         initBoard();
                     }
                 }, 200 * rightGuessString.length)
-            }
-        }
-
-        function shadeKeyBoard(letter, color) {
-            for (const elem of document.getElementsByClassName("keyboard-button")) {
-                if (elem.textContent === letter) {
-                    let oldColor = elem.style.backgroundColor
-                    if (oldColor === 'green') {
-                        return
-                    }
-
-                    if (oldColor === 'yellow' && color !== 'green') {
-                        return
-                    }
-
-                    elem.style.backgroundColor = color
-                    
-                    break
-                }
             }
         }
     });

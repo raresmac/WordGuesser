@@ -1,23 +1,28 @@
 .mainMenu {
+  height: 600px;
   display: flex;
-  height: 100%;
-  justify-content: center;
+  position: absolute;
+  width: 100%;
+  top: 0;
   flex-direction: column;
   align-items: center;
-  background-color: magenta;
+  justify-content: center;
+  z-index: 1000;
 }
 
 .rectangle-lost {
-  position: absolute;
-  top: 200px;
   width: 900px;
   height: 450px;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 
   background: #505050;
   border-radius: 90px;
 }
 
-.enableBlur>* {
+.enableBlur > .icon-game-page, .enableBlur > .game-board, .enableBlur > .submit-button {
   filter: blur(8px);
 }
 
@@ -56,7 +61,6 @@
   font-size: 70px;
   align-items: center;
   text-align: center;
-
   color: #FFFFFF;
 }
 
@@ -66,13 +70,13 @@
   margin-left: 25%;
   width: 50%;
   justify-content: space-between;
-  -webkit-text-stroke: 0.5px black;
 }
 
 .icons-style {
+  -webkit-text-stroke: 0.8px black;
   background-color: #505050;
   color: #FFFFFF;
-  font-size: 40px;
+  font-size: 50px;
   border: none;
   text-decoration: none;
   display: inline-block;
