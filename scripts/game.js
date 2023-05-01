@@ -12,8 +12,6 @@ fetch('../server/info.php')
         nrTries = data.tries;
         guessesRemaining = nrTries;
 
-        console.log(rightGuessString + " " + nrTries);
-
         let board = document.getElementById("game-board");
 
         function initBoard() {
@@ -67,7 +65,6 @@ fetch('../server/info.php')
             clicked = true
             document.dispatchEvent(new KeyboardEvent('keydown', { 'key': '\\' }));
             document.dispatchEvent(new KeyboardEvent('keyup', { 'key': '\\' }));
-            console.log("hey")
         });
 
         document.addEventListener("keyup", (e) => {
@@ -137,26 +134,39 @@ fetch('../server/info.php')
                 let box = row.children[i]
                 let letter = currentGuess[i]
 
-                let letterPosition = rightGuess.indexOf(currentGuess[i])
-                if (letterPosition === -1) {
-                    letterColor = 'grey'
-                } else {
-                    if (currentGuess[i] === rightGuess[i]) {
-                        letterColor = 'green'
-                    } else {
-                        letterColor = 'yellow'
-                    }
-
-                    rightGuess[letterPosition] = "#"
+                let idx = rightGuess.indexOf(currentGuess[i])
+                let letterPosition = [];
+                letterPosition.push(idx);
+                idx = rightGuess.indexOf(currentGuess[i], idx + 1)
+                while (idx !== -1) {
+                    letterPosition.push(idx);
+                    idx = rightGuess.indexOf(currentGuess[i], idx + 1);
                 }
 
+                if (letterPosition[0] === -1) {
+                    letterColor = 'grey'
+                } else if (currentGuess[i] === rightGuess[i]) {
+                    letterColor = 'green'
+                    rightGuess[letterPosition[0]] = "#"
+                } else {
+                    letterColor = 'grey'
+                    const e = letterPosition.entries();
+                    for(let i = 0; i < letterPosition.length; i++){
+                        if (currentGuess[letterPosition[i]] !== rightGuess[letterPosition[i]]){
+                            letterColor = 'yellow'
+                            rightGuess[letterPosition[i]] = "#"
+                            break
+                        }
+                    }
+                }
+                
                 let delay = 200 * i
                 setTimeout(() => {
                     box.style.color = "black"
                     box.style.backgroundColor = letterColor
                 }, delay)
             }
-
+            
             if (guessString === rightGuessString) {
                 setTimeout(() => {
                     youWonOn()
@@ -168,11 +178,10 @@ fetch('../server/info.php')
                 currentRow = currentRow + 1;
                 currentGuess = [];
                 nextLetter = 0;
-
+                
                 setTimeout(() => {
                     if (guessesRemaining === 0) {
                         youLostOn();
-                        alert(`The right word was: "${rightGuessString}"`)
                     }
                     else {
                         initBoard();
@@ -180,4 +189,4 @@ fetch('../server/info.php')
                 }, 200 * rightGuessString.length)
             }
         }
-    });
+    })

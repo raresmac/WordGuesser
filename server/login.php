@@ -17,13 +17,13 @@ if($_POST['login']) {
 		}
 		else {
 			$_SESSION['error'] = 'Username or password are wrong';
-			header('Location: index.php');
+			header('Location: ../index.php');
 			exit();
 		}
 	}
 	else {
 		$_SESSION['error'] = 'Username and password are required';
-		header('Location: index.php');
+		header('Location: ../index.php');
 		exit();
 	}
 }
@@ -35,7 +35,7 @@ elseif($_POST['register']){
 
 		if(mysqli_num_rows($result) != 0) {
 			$_SESSION['error'] = 'Username already exists';
-			header('Location: index.php');
+			header('Location: ../index.php');
 			exit();
 		}
 		else {
@@ -50,17 +50,17 @@ elseif($_POST['register']){
 	}
 	else {
 		$_SESSION['error'] = 'Username and password are required';
-		header('Location: index.php');
+		header('Location: ../index.php');
 		exit();
 	}
 }
 elseif($_POST['forgot']){
 	$_SESSION['error'] = 'Not my problem!';
-	header('Location: index.php');
+	header('Location: ../index.php');
 	exit();
 }
 else {
-	header('Location: index.php');
+	header('Location: ../index.php');
 	exit();
 }
 ?>

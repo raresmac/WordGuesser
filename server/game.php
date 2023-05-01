@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['logged']) || $_SESSION['logged'] != True) {
+	header('Location: ../index.php');
+	exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,10 +38,10 @@
 <body>
   <div class="enableBlur" id="enableBlur">
     <div id="icon-game-page">
-      <div class="show-how-many-hints">
+      <!-- <div class="show-how-many-hints">
         <i class="fa-solid fa-lightbulb icon-hint"></i>
         <div class="text-show-hints">5/7</div>
-      </div>
+      </div> -->
       <a href="main.php">
         <i class="fa-solid fa-house icon-home"></i>
       </a>
@@ -48,7 +57,7 @@
       <div class="rectangle-lost">
         <div class="text-you-lost">You lost! :&#40</div>
         <div class="text-the-word-was">The word was:</div>
-        <div class="text-correct-word">NICE WORD</div>
+        <div class="text-correct-word"><?php echo strtoupper($_SESSION['word']); ?></div>
         <div class="icons">
           <a href="choose.php">
             <button class="icons-style color-green" onclick=><i class="fa-solid fa-play"></i></button>

@@ -2,7 +2,7 @@
 session_start();
 
 if (isset($_SESSION['logged']) && $_SESSION['logged'] == True) {
-  header('Location: main.php');
+  header('Location: server/main.php');
   exit();
 }
 ?>
@@ -18,10 +18,10 @@ if (isset($_SESSION['logged']) && $_SESSION['logged'] == True) {
   <script src="https://kit.fontawesome.com/0668abd750.js" crossorigin="anonymous"></script>
 
   <title>LoginPage</title>
-  <link rel="website icon" type="png" href="../images/logo4.png">
+  <link rel="website icon" type="png" href="images/logo4.png">
 
-  <link rel="stylesheet" href="../styles/register.css">
-  <link rel="stylesheet" href="../styles/default.css">
+  <link rel="stylesheet" href="styles/register.css">
+  <link rel="stylesheet" href="styles/default.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,7 +43,7 @@ if (isset($_SESSION['logged']) && $_SESSION['logged'] == True) {
     <div class="rectangle-title">
       <div class="title">WordGuesser</div>
     </div>
-    <form method="post" class="container" action="login.php">
+    <form method="post" class="container" action="server/login.php">
       <div class="username">
         <div class="username-password-text">
           Username
