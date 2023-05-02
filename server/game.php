@@ -74,8 +74,8 @@ if (!isset($_SESSION['logged']) || $_SESSION['logged'] != True) {
     <div class="mainMenu disableBlur" id="mainMenuWon">
       <div class="rectangle-lost">
         <div class="text-you-lost">You won!</div>
-        <div class="text-the-word-was">You used:</div>
-        <div class="text-correct-word">X hints</div>
+<!--         <div class="text-the-word-was">You used:</div>
+        <div class="text-correct-word">X hints</div> -->
         <div class="icons">
           <a href="choose.php">
             <button class="icons-style color-green"><i class="fa-solid fa-play"></i></button>
